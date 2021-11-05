@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <!--Contained in a folder called views-->
+    <body>
+<form action="/email" method="POST">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend>Adding Object to Database and Retrieving it</legend>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="name">Name</label>  
+      <div class="col-md-4">
+      <input id="name" name="fname" type="text" placeholder="" class="form-control input-md">
+        
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="email">Email</label>  
+      <div class="col-md-4">
+      <input name="email" type="text" placeholder="" class="form-control input-md">
+        
+      </div>
+    </div>
+    
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for=""></label>
+      <div class="col-md-4">
+        <button  class="btn btn-primary">Add to Database</button>
+      </div>
+    </div>
+    
+
+<h2> Names and Email Addresses </h2>
+
+<ul class="Emails">
+  <!-- Loop through names and emails-->
+  <% for(var i = 0; i < email.length; i++) {%>
+    <li class="Email">
+<!--Displays name and email address on html page-->>
+      <div><%= email[i].fname %></div>
+      <div><%= email[i].email %></div>
+      <p></p>
+    </li>
+  <% } %>
+</ul>
+</body>
+</html>
